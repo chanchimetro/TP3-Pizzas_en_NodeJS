@@ -23,7 +23,6 @@ app.get('/pizza', async (req, res) => {
 })
 
 app.post('/pizza', async (req, res) => {
-    console.log("en post, req:", req)
     try {
         await PizzaService.insert(req.body)
         res.status(200).json({message: 'Pizza creada'});
